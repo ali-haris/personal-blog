@@ -1,9 +1,15 @@
-import Image from 'next/image'
-import Navbar from './components/Navbar'
+import Section1 from './components/Section1'
+import Format from './layout/Format'
 
+
+// components
 
 export default function Home() {
   return (
-    <Navbar />
+    <>
+      <Format>
+        <Section1 />
+      </Format>
+    </>
   )
 }

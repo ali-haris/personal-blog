@@ -1,5 +1,5 @@
 import React from 'react'
-
+import Link from 'next/link';
 import { ImFacebook, ImLinkedin2, ImGithub } from "react-icons/im";
 
 
@@ -13,12 +13,16 @@ const Navbar = () => {
                     </div>
                     <div className='shrink w-80 sm:order-2 py-3'>
                         <a className='font-bold uppercase text-2xl'>Design</a>
+
                     </div>
                     <div className='w-96 order-3 flex justify-center py-3'>
                         <div className='flex gap-6'>
-                            <a><ImFacebook color='#888888' /> </a>
-                            <a><ImGithub color='#888888' /> </a>
-                            <a><ImLinkedin2 color='#888888' /> </a>
+                            <Link href={'/'}><ImFacebook color='#888888' /> </Link>
+                            <Link href={'/'}> <ImGithub color='#888888' /> </Link>
+                            <Link href={'/'}>   <ImLinkedin2 color='#888888' /> </Link>
+
+
+
                         </div>
                     </div>
                 </div>
