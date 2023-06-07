@@ -1,13 +1,18 @@
 import Image from 'next/image';
 import Link from 'next/link'
-
-
 import React from 'react'
+import Auther from './_child/Auther';
 
 
 export default function Section1() {
+    const bg = {
+        background: "url('img/banner.png') no-repeat",
+        backgroundPosition: "right",
+
+    }
+
     return (
-        <section className='py-16'>
+        <section className='py-16' style={bg}>
             <div className='container mx-auto md:px-20'>
                 <h1 className='font-bold text-4xl pb-12 text-center'>Trending</h1>
                 {Slide()}
@@ -36,9 +41,9 @@ function Slide() {
                     <p className='text-gray-500 py-3'>
                         printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
                     </p>
-                    <h1>auther name</h1>
+                    <Auther />
                 </div>
-            </div >
+            </div>
         </>
     )
 }
