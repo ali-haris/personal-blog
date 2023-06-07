@@ -1,7 +1,9 @@
-import Image from 'next/image'
+import Image from 'next/image';
+import Link from 'next/link'
 
 
 import React from 'react'
+
 
 export default function Section1() {
     return (
@@ -21,10 +23,22 @@ function Slide() {
         <>
             <div className='grid md:grid-cols-2'>
                 <div className='image'>
-                    <Image src={"/img/heroslider.jpg"} width={400} height={400} alt='#' />
+                    <Link href={'/'}><Image src={"/img/heroslider.jpg"} width={400} height={400} alt='#' /></Link>
                 </div>
-                <div className='info'></div>
-            </div>
+                <div className='info flex justify-center flex-col'>
+                    <div className='cat'>
+                        <Link href={'/'} className='text-orange-600 hover:text-orange-800'>Business, Travel</Link>
+                        <Link href={'/'} className='text-gray-800 hover:text-orange-600'>-June 3,2023</Link>
+                    </div>
+                    <div className='title'>
+                        <Link href={'/'} className='text-2xl md:text-6xl font-bold text-gray-800 hover:text-gray-600'>Your most unhappy customers are your greatest source of learning</Link>
+                    </div>
+                    <p className='text-gray-500 py-3'>
+                        printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                    </p>
+                    <h1>auther name</h1>
+                </div>
+            </div >
         </>
     )
 }
