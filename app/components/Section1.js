@@ -1,7 +1,14 @@
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link'
 import React from 'react'
 import Auther from './_child/Auther';
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+// Import Swiper styles
+import 'swiper/css';
+
 
 
 export default function Section1() {
@@ -15,7 +22,19 @@ export default function Section1() {
         <section className='py-16' style={bg}>
             <div className='container mx-auto md:px-20'>
                 <h1 className='font-bold text-4xl pb-12 text-center'>Trending</h1>
-                {Slide()}
+
+                <Swiper
+                    spaceBetween={50}
+                    slidesPerView={1}
+                    onSlideChange={() => console.log('slide change')}
+                    onSwiper={(swiper) => console.log(swiper)}
+                >
+                    <SwiperSlide> {Slide()}</SwiperSlide>
+                    <SwiperSlide> {Slide()}</SwiperSlide>
+                    <SwiperSlide> {Slide()}</SwiperSlide>
+
+                </Swiper>
+
             </div>
         </section>
     )
