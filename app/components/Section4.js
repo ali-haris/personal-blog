@@ -11,11 +11,23 @@ export default function Section4() {
                 <div className='grid lg:grid-cols-2'>
                     <div className='item'>
                         <h1 className='font-bold text-4xl py-12'>Business</h1>
+                        <div className='flex flex-col gap-6'>
+                            {/* posts */}
+                            {Post()}
+                            {Post()}
+                            {Post()}
+                            {Post()}
+                        </div>
                     </div>
                     <div className='item'>
-                        <div className='flex flex-col gap-6'>
 
+                        <h1 className='font-bold text-4xl py-12'>Travel</h1>
+                        <div className='flex flex-col gap-6'>
                             {/* posts */}
+                            {Post()}
+                            {Post()}
+                            {Post()}
+                            {Post()}
                         </div>
                     </div>
                 </div>
@@ -27,7 +39,7 @@ function Post() {
     return (
         <div className='flex gap-5'>
             <div className='image flex flex-col justify-start'>
-                <Link href={'/'}><Image src={"/img/heroslider.jpg"} className='rounded' width={250} height={200} alt='#' /></Link>
+                <Link href={'/'}><Image src={"/img/heroslider.jpg"} className='rounded' width={300} height={250} alt='#' /></Link>
             </div>
             <div className='info flex justufy-center flex-col'>
                 <div className='cat'>
@@ -35,7 +47,7 @@ function Post() {
                     <Link href={'/'} className='text-gray-800 hover:text-orange-600'>-June 3,2023</Link>
                 </div>
                 <div className='title'>
-                    <Link href={'/'} className='text-3xl md:text-4xl font-bold text-gray-800 hover:text-gray-600'>Your most unhappy customers are your greatest source of learning</Link>
+                    <Link href={'/'} className='text-xl font-bold text-gray-800 hover:text-gray-600'>Your most unhappy customers are your greatest source of learning</Link>
                 </div>
                 <Auther></Auther>
             </div>
