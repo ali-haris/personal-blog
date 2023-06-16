@@ -1,11 +1,13 @@
 import React from 'react'
 import { ImFacebook, ImLinkedin2, ImGithub } from "react-icons/im";
 import Link from 'next/link';
+import Newsletter from './_child/Newsletter'
 
 function Footer() {
     return (
         <>
-            <section className='bg-gray-50'>
+            <footer className='bg-gray-50'>
+                <Newsletter />
                 <div className='container mx-auto flex justify-center py-12'>
                     <div className='py-5'>
                         <div className='flex gap-6 justify-center'>
@@ -17,7 +19,7 @@ function Footer() {
                         <p className='text-gray-400 text-center'>Terms & Conditions</p>
                     </div>
                 </div>
-            </section>
+            </footer>
         </>
     )
 }
